@@ -1,5 +1,14 @@
+import Debug "mo:base/Debug";
+import Nat "mo:base/Nat";
 actor {
-  public query func greet(name : Text) : async Text {
-    return "Hello, " # name # "!";
-  };
+  let x : Nat = 12;
+  Debug.print(debug_show (x));
+  // x:=23; No
+
+  var y : Nat = 23;
+  Debug.print(debug_show (y));
+
+  y := 100;
+  Debug.print(debug_show (y));
+
 };
