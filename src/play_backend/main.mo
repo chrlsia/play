@@ -2,11 +2,13 @@ import Debug "mo:base/Debug";
 
 actor {
 
-  var ar : [Nat] = [1, 2, 3];
+  var ar = [var 1, 2, 3];
   Debug.print(debug_show (ar));
 
-  ar := [4, 5, 6]; //Yes
-  // ar[0] := 10; // No
+  ar := [var 4, 5, 6]; //Yes
+  Debug.print(debug_show (ar));
+
+  ar[0] := 10; // Yes
 
   Debug.print(debug_show (ar[0]));
 
